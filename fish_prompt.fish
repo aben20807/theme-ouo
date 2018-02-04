@@ -112,7 +112,7 @@ function pre_prompt --on-event fish_prompt
     end
 
     # Format Git prompt output
-    set pre_prompt $pre_prompt "$pure_color_blue$git_branch_name$git_dirty$pure_color_normal$pure_color_red$git_arrows$pure_color_normal "
+    set pre_prompt $pre_prompt "$pure_color_gray$git_branch_name$git_dirty$pure_color_normal$pure_color_blue$git_arrows$pure_color_normal "
   end
 
   # if test $pure_user_host_location -ne 1
