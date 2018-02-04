@@ -54,23 +54,23 @@ function pre_prompt --on-event fish_prompt
 
   set pre_prompt $pre_prompt "$pure_color_green$user$pure_color_normal"
   # Check if user is in an SSH session
-  if [ "$SSH_CONNECTION" != "" ]
-    set -l host (hostname -s)
-    set -l user (whoami)
+  # if [ "$SSH_CONNECTION" != "" ]
+    # set -l host (hostname -s)
+    # set -l user (whoami)
 
-    if [ "$user" = "root" ]
-      set user "$pure_root_color$user"
-    else
-      set user "$pure_username_color$user"
-    end
+    # if [ "$user" = "root" ]
+      # set user "$pure_root_color$user"
+    # else
+      # set user "$pure_username_color$user"
+    # end
 
-    # Format user and host part of prompt
-    set user_and_host "$user$pure_color_gray@$pure_host_color$host$pure_color_normal "
-  end
+    # # Format user and host part of prompt
+    # set user_and_host "$user$pure_color_gray@$pure_host_color$host$pure_color_normal "
+  # end
 
-  if test $pure_user_host_location -eq 1
-    set pre_prompt $pre_prompt $user_and_host
-  end
+  # if test $pure_user_host_location -eq 1
+    # set pre_prompt $pre_prompt $user_and_host
+  # end
 
   # Format current folder on prompt output
   set pre_prompt $pre_prompt " $pure_color_yellow$current_folder$pure_color_normal "
@@ -115,16 +115,16 @@ function pre_prompt --on-event fish_prompt
     set pre_prompt $pre_prompt "$pure_color_blue$git_branch_name$git_dirty$pure_color_normal$pure_color_red$git_arrows$pure_color_normal "
   end
 
-  if test $pure_user_host_location -ne 1
-    set pre_prompt $pre_prompt $user_and_host
-  end
+  # if test $pure_user_host_location -ne 1
+    # set pre_prompt $pre_prompt $user_and_host
+  # end
 
   # Prompt command execution duration
-  if test -n "$CMD_DURATION"
-    set command_duration (__format_time $CMD_DURATION $pure_command_max_exec_time)
-  end
+  # if test -n "$CMD_DURATION"
+    # set command_duration (__format_time $CMD_DURATION $pure_command_max_exec_time)
+  # end
 
-  set pre_prompt $pre_prompt "$pure_color_yellow$command_duration$pure_color_normal"
+  # set pre_prompt $pre_prompt "$pure_color_yellow$command_duration$pure_color_normal"
 
   echo -e -s $pre_prompt
 end
@@ -157,9 +157,9 @@ function fish_prompt
   end
 
   # Show python virtualenv name (if activated)
-  if test -n "$VIRTUAL_ENV"
-    set prompt $prompt $pure_color_gray(basename "$VIRTUAL_ENV")"$pure_color_normal "
-  end
+  # if test -n "$VIRTUAL_ENV"
+    # set prompt $prompt $pure_color_gray(basename "$VIRTUAL_ENV")"$pure_color_normal "
+  # end
 
   set prompt $prompt "$color_symbol$pure_symbol_prompt$pure_color_normal "
 
