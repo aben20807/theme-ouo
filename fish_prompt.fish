@@ -12,6 +12,8 @@ set -g __pure_fresh_session 1
 # Deactivate the default virtualenv prompt so that we can add our own
 set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
 
+# exit code
+set -g exit_code 0
 # Determines whether the username and host are shown at the begining or end
 # 0 - end of prompt, default
 # 1 - start of prompt
