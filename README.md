@@ -35,6 +35,7 @@ $ omf u ouo
 * Display ⇡ if there are stuff to be pushed
 * Display ⇣ if there are stuff to be pulled
 * Display the current folder and command when a process is running
+* Display prompt symbol in red if previous command has failed
 
 ## License
 

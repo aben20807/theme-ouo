@@ -22,6 +22,9 @@ __pure_set_default pure_user_host_location 0
 __pure_set_default pure_command_max_exec_time 5
 
 function pre_prompt --on-event fish_prompt
+  # Save previous exit code
+  set -g exit_code $status
+
   # Colors
   set -l pure_color_red (set_color FF0000)
   set -l pure_color_green (set_color green)
@@ -143,9 +146,6 @@ function fish_prompt
   set -l pure_symbol_prompt "❯"
 
   set -l prompt ""
-
-  # Save previous exit code
-  set -l exit_code $status
 
   # Set default color symbol to green meaning it's all good!
   set -l color_symbol $pure_color_green
