@@ -1,6 +1,9 @@
-# Pure
-# by Rafael Rinaldi
-# https://github.com/rafaelrinaldi/pure
+# theme-ouo
+# by Huang Po-Hsuan
+# https://github.com/aben20807/theme-ouo
+# # Pure
+# # by Rafael Rinaldi
+# # https://github.com/rafaelrinaldi/pure
 # MIT License
 
 # Whether or not is a fresh session
@@ -8,28 +11,6 @@ set -g __pure_fresh_session 1
 
 # Deactivate the default virtualenv prompt so that we can add our own
 set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
-
-# Symbols
-
-__pure_set_default pure_symbol_prompt "❯"
-__pure_set_default pure_symbol_git_down_arrow "⇣"
-__pure_set_default pure_symbol_git_up_arrow "⇡"
-__pure_set_default pure_symbol_git_dirty "*"
-__pure_set_default pure_symbol_horizontal_bar "—"
-
-# Colors
-
-__pure_set_default pure_color_red (set_color red)
-__pure_set_default pure_color_green (set_color green)
-__pure_set_default pure_color_blue (set_color blue)
-__pure_set_default pure_color_yellow (set_color yellow)
-__pure_set_default pure_color_cyan (set_color cyan)
-__pure_set_default pure_color_gray (set_color 93A1A1)
-__pure_set_default pure_color_normal (set_color normal)
-
-__pure_set_default pure_username_color $pure_color_gray
-__pure_set_default pure_host_color $pure_color_gray
-__pure_set_default pure_root_color $pure_color_normal
 
 # Determines whether the username and host are shown at the begining or end
 # 0 - end of prompt, default
@@ -41,6 +22,21 @@ __pure_set_default pure_user_host_location 0
 __pure_set_default pure_command_max_exec_time 5
 
 function pre_prompt --on-event fish_prompt
+  # Colors
+  set -l pure_color_red (set_color FF0000)
+  set -l pure_color_green (set_color green)
+  set -l pure_color_blue (set_color 0087FF)
+  set -l pure_color_yellow (set_color yellow)
+  set -l pure_color_cyan (set_color cyan)
+  set -l pure_color_gray (set_color B9B9B9)
+  set -l pure_color_normal (set_color normal)
+
+  # Symbols
+  set -l pure_symbol_git_down_arrow "⇣"
+  set -l pure_symbol_git_up_arrow "⇡"
+  set -l pure_symbol_git_dirty "*"
+  set -l pure_symbol_horizontal_bar "—"
+
   # Template
   set -l user_and_host ""
   set -l current_folder (__parse_current_folder)
@@ -49,12 +45,14 @@ function pre_prompt --on-event fish_prompt
   set -l git_arrows ""
   set -l command_duration ""
   set -l pre_prompt ""
+  set -l user "ouo"
 
   # Do not add a line break to a brand new session
   if test $__pure_fresh_session -eq 0
     set pre_prompt $pre_prompt "\n"
   end
 
+  set pre_prompt $pre_prompt "$pure_color_green$user$pure_color_normal"
   # Check if user is in an SSH session
   if [ "$SSH_CONNECTION" != "" ]
     set -l host (hostname -s)
@@ -101,7 +99,7 @@ function pre_prompt --on-event fish_prompt
       set -l git_status (string split ' ' (string replace -ar '\s+' ' ' (command git rev-list --left-right --count 'HEAD...@{upstream}')))
 
       set -l git_arrow_left $git_status[1]
-      set -l git_arrow_right $git_status[2] 
+      set -l git_arrow_right $git_status[2]
 
       # If arrow is not "0", it means it's dirty
       if test $git_arrow_left != 0
@@ -132,6 +130,18 @@ function pre_prompt --on-event fish_prompt
 end
 
 function fish_prompt
+  # Colors
+  set -l pure_color_red (set_color FF0000)
+  set -l pure_color_green (set_color green)
+  set -l pure_color_blue (set_color 0087FF)
+  set -l pure_color_yellow (set_color yellow)
+  set -l pure_color_cyan (set_color cyan)
+  set -l pure_color_gray (set_color B9B9B9)
+  set -l pure_color_normal (set_color normal)
+
+  # Symbols
+  set -l pure_symbol_prompt "❯"
+
   set -l prompt ""
 
   # Save previous exit code
