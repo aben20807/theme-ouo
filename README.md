@@ -5,7 +5,7 @@
 + Port of the [`pure`](https://github.com/sindresorhus/pure) ZSH theme to Fish 🐟
 
 <p align=center>
-  <img width=585 src=screenshot.png>
+  <img width=585 src=https://imgur.com/sdqf7he.png>
 </p>
 
 ## Install and Set theme
@@ -16,6 +16,8 @@
 $ omf install https://github.com/aben20807/theme-ouo
 $ omf theme ouo
 ```
+
+### [How to set fish as default shell in Cygwin](https://stackoverflow.com/a/34683320/6734174)
 
 ## Update
 
