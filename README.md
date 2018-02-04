@@ -5,7 +5,7 @@
 + Port of the [`pure`](https://github.com/sindresorhus/pure) ZSH theme to Fish 🐟
 
 <p align=center>
-  <img width=585 src=https://imgur.com/sdqf7he.png>
+  <img width=585 src=https://imgur.com/8C4hOXn.png>
 </p>
 
 ## Install and Set theme
