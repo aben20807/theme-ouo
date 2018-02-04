@@ -1,34 +1,28 @@
-# pure [![Fish Shell Version](https://img.shields.io/badge/fish-v2.5.0-007EC7.svg?style=flat-square)](http://fishshell.com) [![Build Status][travis-badge]][travis-link]
+# theme-ouo
 
-> Port of the [`pure`](https://github.com/sindresorhus/pure) ZSH theme to Fish 🐟
++ A Oh My Fish theme inspired by [pure](https://github.com/rafaelrinaldi/pure).
++ pure [![Fish Shell Version](https://img.shields.io/badge/fish-v2.5.0-007EC7.svg?style=flat-square)](http://fishshell.com) [![Build Status][travis-badge]][travis-link]
++ Port of the [`pure`](https://github.com/sindresorhus/pure) ZSH theme to Fish 🐟
 
 <p align=center>
   <img width=585 src=screenshot.png>
 </p>
 
-## Install
-
-### Manually
-
-Via [cURL](https://curl.haxx.se):
-
-```sh
-$ # Download the installer to `/tmp`
-$ curl -Ls https://raw.github.com/rafaelrinaldi/pure/master/installer.fish > /tmp/pure_installer.fish
-$ # Source and trigger the installer
-$ source /tmp/pure_installer.fish; and install_pure
-```
-
-### [Fisherman](http://fisherman.sh)
-
-```fish
-$ fisher rafaelrinaldi/pure
-```
+## Install and Set theme
 
 ### [Oh My Fish!](https://github.com/oh-my-fish)
 
 ```fish
-$ omf install pure
+$ omf install https://github.com/aben20807/theme-ouo
+$ omf theme ouo
+```
+
+## Update
+
+### [Oh My Fish!](https://github.com/oh-my-fish)
+
+```fish
+$ omf u ouo
 ```
 
 ## Features
