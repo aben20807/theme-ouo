@@ -145,7 +145,8 @@ function fish_prompt
   set -l pure_color_normal (set_color normal)
 
   # Symbols
-  set -l pure_symbol_prompt "❯"
+  # set -l pure_symbol_prompt "❯"
+  set -l pure_symbol_prompt "$"
 
   set -l prompt ""
 
