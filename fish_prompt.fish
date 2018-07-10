@@ -146,7 +146,7 @@ function fish_prompt
 
   # Symbols
   # set -l pure_symbol_prompt "❯"
-  set -l pure_symbol_prompt "$"
+  set -l pure_symbol_prompt "\$"
 
   set -l prompt ""
 
