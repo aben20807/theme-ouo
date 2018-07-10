@@ -10,14 +10,28 @@
 
 ## Install and Set theme
 
-### [Oh My Fish!](https://github.com/oh-my-fish)
+### Install [Fish](https://github.com/fish-shell/fish-shell)
+
+```bash
+$ sudo apt-add-repository ppa:fish-shell/release-2
+$ sudo apt update
+$ sudo apt install fish
+```
+
+### Install [Oh My Fish!](https://github.com/oh-my-fish)
+
+```bash
+$ curl -L https://get.oh-my.fish | fish
+```
+
+### Install ouo theme
 
 ```fish
 $ omf install https://github.com/aben20807/theme-ouo
 $ omf theme ouo
 ```
 
-### [How to set fish as default shell in Cygwin](https://stackoverflow.com/a/34683320/6734174)
++ [How to set fish as default shell in Cygwin](https://stackoverflow.com/a/34683320/6734174)
 
 ## Update
 
